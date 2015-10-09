@@ -3,7 +3,7 @@ package com.zhenglee.damonlib;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import tk.zhenglee.comzhengleeframework.res.annotation.IdResource;
@@ -16,7 +16,7 @@ import tk.zhenglee.comzhengleeframeworkui.BaseActivity;
 public class MainActivity extends BaseActivity {
 
     @IdResource(R.id.hello)
-    private TextView btn;
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
