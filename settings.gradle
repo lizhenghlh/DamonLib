@@ -1,1 +1,1 @@
-include ':com.zhenglee.framework', ':com.zhenglee.framework.ui', 'app'
+include ':framework', ':ui', 'app'

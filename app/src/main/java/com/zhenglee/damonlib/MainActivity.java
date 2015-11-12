@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import tk.zhenglee.comzhengleeframework.res.annotation.IdResource;
-import tk.zhenglee.comzhengleeframework.res.annotation.LayoutResource;
-import tk.zhenglee.comzhengleeframework.res.annotation.MenuResource;
-import tk.zhenglee.comzhengleeframeworkui.BaseActivity;
+import tk.zhenglee.framework.res.annotation.IdResource;
+import tk.zhenglee.framework.res.annotation.LayoutResource;
+import tk.zhenglee.framework.res.annotation.MenuResource;
+import tk.zhenglee.ui.BaseActivity;
 
 @MenuResource(R.menu.menu_main)
 @LayoutResource(R.layout.activity_main)
