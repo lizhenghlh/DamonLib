@@ -3,6 +3,9 @@ package tk.zhenglee.framework.schedule;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.concurrent.Executor;
@@ -15,6 +18,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Created by zhenglee on 15/10/21.
  */
 public class AsyncTaskQueue {
+
+    private static final Logger logger = LoggerFactory.getLogger(AsyncTaskQueue.class);
 
     private static ThreadFactory THREAD_FACTORY = new ThreadFactory() {
 
@@ -46,7 +51,7 @@ public class AsyncTaskQueue {
                     try {
                         command.run();
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        logger.error(e.getMessage(), e);
                     } finally {
                     }
                 }
@@ -58,7 +63,7 @@ public class AsyncTaskQueue {
                 try {
                     this.queue.scheduledExecutor.execute(this.active);
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    logger.error(e.getMessage(), e);
                 }
             }
         }
