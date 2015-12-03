@@ -50,7 +50,6 @@ public class MainActivity extends BaseActivity {
                 adapter.notifyDataSetChanged();
             }
         });
-        listview.setI
 
     }
 
